@@ -209,7 +209,7 @@ def parkWhiz(airport_name, start_time, end_time):
 
                         # Check availability of parking lot
                         availability_status = listing.get("purchase_options", [{}])[0].get("space_availability", {}).get("status")
-                        available = availability_status == "available"
+                        available = availability_status == "available" or availability_status == "limited"
 
                         parking_data.append({
                             "ParkWhiz_provider_id": int(data.get("id")),

@@ -17,6 +17,8 @@ Once that is download, click 'Add Connection'.
 Add the following information to connect to the database:
 ![alt text](image.png)
 
+There are two databases used in this project: parking_listings (that contains all the parking spots found for each provider) and parking_matches (that contains all the merged matches between providers).
+
 # Approach to API Discovery
 
 For my approach to API discovery, I googled each company to find public api documentation. For Cheap Airport Parking, where I could not find public api documentation, I knew I would have to look at the Network tab in developer tools to determine how to make the API call.
