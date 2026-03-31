@@ -1,0 +1,201 @@
+{
+  "info": {
+    "_postman_id": "044d4a64-7155-44d5-be3b-7b2b4f0b91fe",
+    "name": "Parking APIs",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "53537437",
+    "_collection_link": "https://go.postman.co/collection/53537437-044d4a64-7155-44d5-be3b-7b2b4f0b91fe?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Spothero GET Airport Parking",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Status code is 200\", function () {",
+              "    pm.response.to.have.status(200);",
+              "});"
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://api.spothero.com/v2/search/airport?iata=ATL&starts=2026-10-10T10:00:00Z&ends=2026-10-10T11:00:00Z&page_size=2",
+          "protocol": "https",
+          "host": [
+            "api",
+            "spothero",
+            "com"
+          ],
+          "path": [
+            "v2",
+            "search",
+            "airport"
+          ],
+          "query": [
+            {
+              "key": "iata",
+              "value": "ATL"
+            },
+            {
+              "key": "starts",
+              "value": "2026-10-10T10:00:00Z"
+            },
+            {
+              "key": "ends",
+              "value": "2026-10-10T11:00:00Z"
+            },
+            {
+              "key": "page_size",
+              "value": "2",
+              "type": "text"
+            }
+          ]
+        },
+        "description": "This is a GET request and it is used to \"get\" data from an endpoint. There is no request body for a GET request, but you can use query parameters to help specify the resource you want data on (e.g., in this request, we have `id=1`).\n\nA successful GET response will have a `200 OK` status, and should include some kind of response body - for example, HTML web content or JSON data."
+      },
+      "response": []
+    },
+    {
+      "name": "ParkWhiz GET venue",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://api.parkwhiz.com/v4/venues?q=name:Hartsfield-Jackson Atlanta International Airport",
+          "protocol": "https",
+          "host": [
+            "api",
+            "parkwhiz",
+            "com"
+          ],
+          "path": [
+            "v4",
+            "venues"
+          ],
+          "query": [
+            {
+              "key": "q",
+              "value": "name:Hartsfield-Jackson Atlanta International Airport"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Parkwhiz GET Airport Parking",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://api.parkwhiz.com/v4/quotes?q=venue_id:11&start_time=2026-04-02T08:00:00&end_time=2026-04-06T20:00:00",
+          "protocol": "https",
+          "host": [
+            "api",
+            "parkwhiz",
+            "com"
+          ],
+          "path": [
+            "v4",
+            "quotes"
+          ],
+          "query": [
+            {
+              "key": "q",
+              "value": "venue_id:11"
+            },
+            {
+              "key": "start_time",
+              "value": "2026-04-02T08:00:00"
+            },
+            {
+              "key": "end_time",
+              "value": "2026-04-06T20:00:00"
+            },
+            {
+              "key": "returns",
+              "value": "offstreet_bookable",
+              "disabled": true
+            },
+            {
+              "key": "fields[quotes]",
+              "value": "price,location",
+              "disabled": true
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "CAP GET Airport Parking",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://www.cheapairportparking.org/parking/find.php?airport=DEN&FromDateNice=Apr+1&FromDate=04%2F01%2F2026&from_time=0&ToDateNice=Apr+7&ToDate=04%2F07%2F2026&to_time=0",
+          "protocol": "https",
+          "host": [
+            "www",
+            "cheapairportparking",
+            "org"
+          ],
+          "path": [
+            "parking",
+            "find.php"
+          ],
+          "query": [
+            {
+              "key": "airport",
+              "value": "DEN"
+            },
+            {
+              "key": "FromDateNice",
+              "value": "Apr+1"
+            },
+            {
+              "key": "FromDate",
+              "value": "04%2F01%2F2026"
+            },
+            {
+              "key": "from_time",
+              "value": "0"
+            },
+            {
+              "key": "ToDateNice",
+              "value": "Apr+7"
+            },
+            {
+              "key": "ToDate",
+              "value": "04%2F07%2F2026"
+            },
+            {
+              "key": "to_time",
+              "value": "0"
+            },
+            {
+              "key": "promo",
+              "value": "",
+              "disabled": true
+            },
+            {
+              "key": "id_lot",
+              "value": "",
+              "disabled": true
+            }
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}

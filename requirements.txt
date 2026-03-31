@@ -1,0 +1,6 @@
+requests
+bs4
+collection
+psycopg2-binary
+datetime
+pytest
